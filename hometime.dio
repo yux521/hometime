@@ -1,0 +1,120 @@
+<mxfile host="65bd71144e" modified="2021-02-02T01:08:18.154Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="uGpG9AcflGvNWcgf87mw" version="13.10.0" type="embed">
+    <diagram id="gfCk4H9icO2LiPwnH3U9" name="ER図・画面遷移図">
+        <mxGraphModel dx="2240" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="67" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="20" y="10" width="700" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="67" vertex="1">
+                    <mxGeometry y="40" width="298.0988593155894" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="+email(メール)                 　　　　　　null: false&#10;+encrypted_password (パスワード)　  null: false&#10;+nickname(ニックネーム)　　　　　   null: false&#10;+lastname(名字) 　　                            null: false&#10;+firstname(名前)                                    null: false&#10;&#10;has_many :recipes&#10;has_many :comments" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="4" vertex="1">
+                    <mxGeometry y="30" width="298.0988593155894" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Recipes" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="67" vertex="1">
+                    <mxGeometry x="359.31558935361215" width="340.68441064638785" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="+title(タイトル)                      null: false &#10;+guideline_id(目安時間)         null: false  &#10;+memo(メモやポイント)       null: false &#10;+ingredient_1(食材)          　  null: false  &#10;+ingredient_2　　   　          &#10;+ingredient_3　　   　          &#10;+ingredient_4　　   　          &#10;+ingredient_5　　   　          &#10;+ingredient_6&#10;+ingredient_7&#10;+ingredient_8&#10;+ingredient_9&#10;+ingredient_10　&#10;+cook_1(調理)　　　   　          null: false &#10;+cook_2　　   　          &#10;+cook_3　　   　          &#10;+cook_4　　   　          &#10;+cook_5　　   　          &#10;+cook_6&#10;+cook_7&#10;+cook_8&#10;+cook_9&#10;+cook_10　　   　             &#10;+user_id                               foreign_key: true　　　　&#10;&#10;belongs_to :user&#10;has_many :comments&#10;has_one_attached :image(画像)  ActiveStorageで実装&#10;belongs_to :guideline                   ActiveHashで実装&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="6" vertex="1">
+                    <mxGeometry y="30" width="340.68441064638785" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Comments" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="67" vertex="1">
+                    <mxGeometry x="50.57034220532319" y="320" width="219.31558935361215" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+text               null: false&#10;+user_id         foreign_key: true&#10;+recipe_id      foreign_key: true&#10;&#10;belongs_to :user&#10;belongs_to :recipe" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="8" vertex="1">
+                    <mxGeometry y="30" width="219.31558935361215" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=ERoneToMany;endFill=0;startArrow=ERone;startFill=0;" parent="67" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.829;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;endArrow=ERone;endFill=0;entryPerimeter=0;" parent="67" source="9" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="327.37642585551333" y="425"/>
+                            <mxPoint x="327.37642585551333" y="370"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;endArrow=ERone;endFill=0;" parent="67" source="9" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="60" y="580" width="430" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="69" source="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="280" y="125" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="TOPページ" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry x="140" y="100" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=7.324999999999999;entryDy=7.324999999999999;entryPerimeter=0;" parent="69" source="17" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="100" y="33"/>
+                            <mxPoint x="30" y="33"/>
+                            <mxPoint x="30" y="107"/>
+                        </Array>
+                        <mxPoint x="30" y="52.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="新規投稿&lt;br&gt;ページ" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry x="100" y="15" width="80" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=-25;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=22.5;entryPerimeter=0;" parent="69" source="16" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=15;exitPerimeter=0;" parent="69" source="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="40" y="210"/>
+                            <mxPoint x="180" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="サインイン" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry y="140" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="69" source="16" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="投稿詳細&lt;br&gt;ページ" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry x="282.5" y="110" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="69" source="31" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="430" y="68"/>
+                            <mxPoint x="430" y="125"/>
+                        </Array>
+                        <mxPoint x="480" y="125" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="投稿編集&lt;br&gt;ページ" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry x="282.5" y="52.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=-15;exitPerimeter=0;" parent="69" source="25" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=72.675;entryDy=42.675;entryPerimeter=0;" parent="69" source="34" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="投稿削除&lt;br&gt;ページ" style="html=1;dashed=0;whitespace=wrap;shape=mxgraph.dfd.start" parent="69" vertex="1">
+                    <mxGeometry x="282.5" y="180" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=15;exitPerimeter=0;" parent="69" source="25" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=72.675;entryDy=7.324999999999999;entryPerimeter=0;startArrow=classic;startFill=1;" parent="69" source="52" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="お役立ち情報" style="html=1;dashed=0;whitespace=wrap;" parent="69" vertex="1">
+                    <mxGeometry x="190" width="90" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

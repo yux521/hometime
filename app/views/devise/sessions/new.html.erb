@@ -1,0 +1,31 @@
+<div class="sign-in">
+  <div class="align">
+    <div class="grid">
+      <div id="login">
+        <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <h2><span class="fontawesome-lock"></span>Sign In</h2>
+          <fieldset>
+            <%# ログイン時のエラーメッセージ  %>
+            <div class='login-flash-message'>
+              <%= flash[:notice] %>
+              <%= flash[:alert] %>
+            </div><br/>
+            <div>
+              <%= f.label :email, "メールアドレス"%>
+              <%= f.email_field :email, autofocus: true %>
+            </div><br />
+
+            <div>
+              <%= f.label :password , "パスワード（6文字以上）" %>
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div><br />
+
+            <div class="btn">
+              <%= f.submit "Log in" , class: "btn btn-info"%>
+            </div>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

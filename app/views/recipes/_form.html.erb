@@ -1,0 +1,59 @@
+<%= form_with(model: recipe, local: true)  do |f| %>
+  <div class="recipe_foom">
+    <div class="alert alert-danger">
+      <h3>レシピを投稿しよう</h3>
+      <ul>＜登録手順＞
+        <li>１〜６項目を記入してください</li>
+        <li>必ず１項目につき１つの登録が必要です</li>
+        <li>ご登録いただけなかった場合は、下記に理由が表示されます。再度ご登録をお願いします。</li>
+      </ul>
+      <%= render 'layouts/error_messages', model: f.object %>
+    </div>
+    <div class="field">
+      <%= f.label :title, "1.レシピのタイトル<30字以内> *", class:"h4" %>
+      <%= f.text_field :title,class:"form-control" ,placeholder: "例：１分で完成♪アボカド簡単！漬け丼♡" %><br />
+    </div>
+    <div class="field">
+      <%= f.label :guideline_id, "2.目安時間<選択> *" , class:"h4"%>
+      <%= f.collection_select :guideline_id, Guideline.all, :id, :name, {},class:"form-control" %>
+    </div><br />
+    <div class="field">
+      <%= f.label :memo, "3.レシピのポイント<200字以内> *" , class:"h4"%>
+      <%= f.text_area :memo, placeholder: "例：刺身で「漬け丼」は 定番。新鮮なお刺身で食べると最高に美味しい！！
+      今回は、お刺身ではなく「アボカド」を使った漬け丼♡", rows: "3", class:"form-control" %>
+    </div><br/>
+    <div class="field">
+      <%= f.label :ingredient_1,"4.材料(2人分) <各20字以内> *", class:"h4"%>
+      <%= f.text_field :ingredient_1, placeholder: "1.", class:"form-control" %>
+      <%= f.text_field :ingredient_2, placeholder: "2.", class:"form-control" %>
+      <%= f.text_field :ingredient_3, placeholder: "3.", class:"form-control" %>
+      <%= f.text_field :ingredient_4, placeholder: "4.", class:"form-control" %>
+      <%= f.text_field :ingredient_5, placeholder: "5.", class:"form-control" %>
+      <%= f.text_field :ingredient_6, placeholder: "6.", class:"form-control" %>
+      <%= f.text_field :ingredient_7, placeholder: "7.", class:"form-control" %>
+      <%= f.text_field :ingredient_8, placeholder: "8.", class:"form-control" %>
+      <%= f.text_field :ingredient_9, placeholder: "9.", class:"form-control" %>
+      <%= f.text_field :ingredient_10, placeholder: "10.", class:"form-control" %>
+    </div></br>
+    <div class="field">
+      <%= f.label :cook_1, "5.作り方<各20字以内> *" , class:"h4"%>
+      <%= f.text_field :cook_1, placeholder: "1.", class:"form-control" %>
+      <%= f.text_field :cook_2, placeholder: "2.", class:"form-control" %>
+      <%= f.text_field :cook_3, placeholder: "3.", class:"form-control" %>
+      <%= f.text_field :cook_4, placeholder: "4.", class:"form-control" %>
+      <%= f.text_field :cook_5, placeholder: "5.", class:"form-control" %>
+      <%= f.text_field :cook_6, placeholder: "6.", class:"form-control" %>
+      <%= f.text_field :cook_7, placeholder: "7.", class:"form-control" %>
+      <%= f.text_field :cook_8, placeholder: "8.", class:"form-control" %>
+      <%= f.text_field :cook_9, placeholder: "9.", class:"form-control" %>
+      <%= f.text_field :cook_10, placeholder: "10.", class:"form-control"%>
+    </div><br/>
+    <div class="form-label">
+      <%= f.label :image, "6.完成画像の添付 *" , class:"h4", placeholder: "Image Url" %><br/>
+      <%= f.file_field :image %>
+    </div><br />
+    <div class="actions">
+      <%= f.submit "投稿する", class: :form__btn  %>
+    </div>
+  </div>
+<% end %>

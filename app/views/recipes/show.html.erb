@@ -1,0 +1,108 @@
+<div class="py-6 text-center container" >
+  <div class="contents row">
+    <div class="card-body shadow-sm">
+      <div class="text-left">
+        <p class="card-text h2"><%= "#{@recipe.user.nickname}さんのレシピ"%></p>
+        <p class="card-text ">
+        <%= "(目安時間： #{@recipe.guideline.name})"%>
+        </p>
+      </div>
+      <%= image_tag @recipe.image,alt:"レシピの写真", class:"card-img-top-show"  if @recipe.image.attached? %>
+      <p class="card-text-center h4"><%= @recipe.title%></p><br/>
+      <div class="text-left">
+        <p class="card-text-sm h5">
+        <%= @recipe.memo%></p>
+          <table class="table table-borderless">
+            <thead>
+              <th scope="col"></th>
+              <th scope="col"> [作り方] </th>
+              <th scope="col">[材 料]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td><%= @recipe.cook_1%></td>
+                <td><%= @recipe.ingredient_1%></td>
+              </tr>
+              <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_2%></td>
+            <td><%= @recipe.ingredient_2%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_3%></td>
+            <td><%= @recipe.ingredient_3%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_4%></td>
+            <td><%= @recipe.ingredient_4%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_5%></td>
+            <td><%= @recipe.ingredient_5%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_6%></td>
+            <td><%= @recipe.ingredient_6%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_7%></td>
+            <td><%= @recipe.ingredient_7%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_8%></td>
+            <td><%= @recipe.ingredient_8%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_9%></td>
+            <td><%= @recipe.ingredient_9%></td>
+            </tr>
+            <tr>
+            <th scope="row"></th>
+            <td><%= @recipe.cook_10%></td>
+            <td><%= @recipe.ingredient_10%></td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group ">
+              <% if user_signed_in? && current_user.id == @recipe.user_id %>
+              <%= link_to '編集', edit_recipe_path(@recipe.id), method: :get ,class:"btn btn-sm btn-outline-secondary"%>
+              <%= link_to '削除', recipe_path(@recipe.id), method: :delete ,class:"btn btn-sm btn-outline-secondary"%>
+              <% end %>
+            </div>
+            <%= link_to '一覧に戻る', root_path,class:"badge badge-pill badge-danger"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <% if user_signed_in? %>
+    <%# コメント入力%>
+    <h5>＜みんなのコメント＞</h5><br/>
+    <%= form_with(model: [@recipe, @comment], local: true) do |f| %>
+      <%= f.text_field :text %>
+      <%= f.submit '送信' %>
+    <% end %><br/>
+    <%# コメント表示%>
+    <% @comments.reverse_each do |comment| %>
+      <p>
+      <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+      <%= comment.text %>
+      </p>
+    <% end %>
+  <% end %>
+</div>

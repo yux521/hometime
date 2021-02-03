@@ -1,0 +1,45 @@
+<div class="sign-up">
+<div class="align">
+  <div class="grid">
+    <div id="signup">
+        <%= form_with model: @user, url: user_registration_path , local: true do |f| %>
+            <%# binding.pry %>
+        <%= devise_error_messages! %>
+        
+        <h2><span class="fontawesome-lock"></span>新規ご登録はこちら</h2>
+        <div>
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div>
+          <%= f.label :password, "パスワード（6文字以上）" %><br />
+          <%= f.password_field :password, autocomplete: "new-password" ,length: { minimum: 6 }%>
+        </div>
+
+        <div>
+          <%= f.label :password, "パスワード再入力" %><br />
+          <%= f.password_field :password, autocomplete: "new-password",length: { minimum: 6 } %>
+        </div>
+
+        <div>
+          <%= f.label :nickname, "ニックネーム" %><br />
+          <%= f.text_field :nickname %>
+        </div><br />
+        <div>
+          <%= f.label :lastname, "名字 (ローマ字)" %><br/>
+          <%= f.text_field :lastname, class: :form__text %>
+        </div>
+        <div>
+          <%= f.label :firstname, "名前 (ローマ字)" %><br/>
+          <%= f.text_field :firstname, class: :form__text %>
+        </div>
+        <div class="actions">
+          <%= f.submit "新規登録", class: :form__btn  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+

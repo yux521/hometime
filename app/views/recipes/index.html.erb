@@ -1,0 +1,29 @@
+<section class="py-3 text-center container" >
+  <div class="row py-lg-3">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Home Time</h1></br>
+      <% if user_signed_in? %>
+        <div class="greeting"> 
+          こんにちは
+           <%= "#{ current_user.nickname } さん"%>今日も 
+        </div>
+      おいしいご飯で</br>
+      おうち時間を楽しみましょう！！</br>
+      <% else%>
+        <div class="grid-6">
+          <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary my-2" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "btn btn-secondary my-2" %>
+        </div>
+        毎日の料理にちょっと飽きてきましたよね</br>
+        ちょっと旅行気分なレシピでいつもの食卓を楽しみましょう</br>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<div>
+  <%= render partial: "img_recipe" , model: @recipes %>
+</div>
+
+
