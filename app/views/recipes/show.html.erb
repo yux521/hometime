@@ -8,7 +8,7 @@
         </p>
       </div>
       <%= image_tag @recipe.image,alt:"レシピの写真", class:"card-img-top-show"  if @recipe.image.attached? %>
-      <p class="card-text-center h4"><%= @recipe.title%></p><br/>
+      <p class="card-text-center h4"><%= @recipe.title%></p>
       <div class="text-left">
         <p class="card-text-sm h5">
         <%= @recipe.memo%></p>
@@ -92,11 +92,11 @@
 <div class="container">
   <% if user_signed_in? %>
     <%# コメント入力%>
-    <h5>＜みんなのコメント＞</h5><br/>
+    <h5>＜みんなのコメント＞</h5>
     <%= form_with(model: [@recipe, @comment], local: true) do |f| %>
       <%= f.text_field :text %>
       <%= f.submit '送信' %>
-    <% end %><br/>
+    <% end %>
     <%# コメント表示%>
     <% @comments.reverse_each do |comment| %>
       <p>
