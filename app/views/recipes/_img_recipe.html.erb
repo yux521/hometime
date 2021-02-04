@@ -6,7 +6,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="card-body">
               <div><%= image_tag recipe.image, alt:"レシピの写真", class:"card-img-top " if recipe.image.attached?%>
-             <span><%= link_to recipe.title , recipe_path(recipe.id), method: :get %></span><br/>
+             <span><%= link_to recipe.title , recipe_path(recipe.id), method: :get %></span>
              <small class="text-muted"><%= "目安時間： #{recipe.guideline.name}"%></small>
              <small class="text-muted"><%= "( By  #{recipe.user.nickname} )"%></small>
               </div>

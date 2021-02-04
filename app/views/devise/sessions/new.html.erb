@@ -9,16 +9,16 @@
             <div class='login-flash-message'>
               <%= flash[:notice] %>
               <%= flash[:alert] %>
-            </div><br/>
+            </div>
             <div>
               <%= f.label :email, "メールアドレス"%>
               <%= f.email_field :email, autofocus: true %>
-            </div><br />
+            </div>
 
             <div>
               <%= f.label :password , "パスワード（6文字以上）" %>
               <%= f.password_field :password, autocomplete: "off" %>
-            </div><br />
+            </div>
 
             <div class="btn">
               <%= f.submit "Log in" , class: "btn btn-info"%>
