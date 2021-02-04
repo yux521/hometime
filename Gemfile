@@ -59,7 +59,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
 
-gem 'bootstrap', '~> 4.5.3'
+gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'jquery-rails'
 
 gem 'devise'
