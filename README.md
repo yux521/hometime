@@ -19,7 +19,7 @@
 ### 簡単なアプリの概要
 
 
-### コンセプト
+## コンセプト
 
 ## 実装機能
 ユーザー管理機能<br>
@@ -34,13 +34,11 @@
 
 
 
-# ER図
-![画像名](https://docs.google.com/document/d/1cxuqf2OPtM1FMn15pTQ-4Ght6XOADkyDh6dgKMIL4nY/edit)
-![代替文字列](URL "タイトル")
-
+## ER図
+![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png)
 <img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
 
-# 画面遷移図
+## 画面遷移図
 
 
 
