@@ -55,7 +55,7 @@ deviceのユーザー管理機能を使い、<br>
 コメント機能<br>
 
 ## 画面遷移図
-![画像名](https://github.com/yux521/hometime/blob/master/db8c5ba4bc8d07d972960a6d39b57e66)
+![画像名](https://github.com/yux521/hometime/blob/master/db8c5ba4bc8d07d972960a6d39b57e66.png)
 
 
 ## ER図
