@@ -155,6 +155,6 @@ Faker
 
 
 # 今後の実装機能
-![demo](https://github.com/yux521/hometime/blob/master/deab15adac1c40479f3463375025e201.mp4)
+
 
 
