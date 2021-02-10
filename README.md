@@ -69,8 +69,7 @@
 
 
 # ER図
-
-![alt](https://docs.google.com/document/d/1cxuqf2OPtM1FMn15pTQ-4Ght6XOADkyDh6dgKMIL4nY/edit)
+![画像名](https://docs.google.com/document/d/1cxuqf2OPtM1FMn15pTQ-4Ght6XOADkyDh6dgKMIL4nY/edit)
 ![代替文字列](URL "タイトル")
 
 <img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
