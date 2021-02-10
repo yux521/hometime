@@ -41,12 +41,6 @@
 ## ER図
 ![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png)
 
-
-
-## 画面遷移図
-![画像名](https://github.com/yux521/hometime/blob/master/c8bebfaee207bd3ca8bc67aede0963e7.png)
-
-
 # テーブル設計
 
 ## Users テーブル
@@ -115,6 +109,10 @@
 - belongs_to :user
 - belongs_to :recipe
 
+
+
+## 画面遷移図
+![画像名](https://github.com/yux521/hometime/blob/master/c8bebfaee207bd3ca8bc67aede0963e7.png)
 
 
 
