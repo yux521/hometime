@@ -44,7 +44,7 @@
 ## ER図
 ![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png)
 
-# テーブル設計
+## テーブル設計
 
 ## Users テーブル
 
