@@ -16,7 +16,32 @@
 検索しやすく<br>
 コミュニケーションも取れる<br>
 
-# 簡単なアプリの概要
+### 簡単なアプリの概要
+
+
+### コンセプト
+
+## 実装機能
+ユーザー管理機能<br>
+新規作成機能<br>
+編集機能<br>
+削除機能<br>
+一覧機能<br>
+画像投稿機能<br>
+検索機能<br>
+エラーの日本語表記<br>
+コメント機能<br>
+
+
+
+# ER図
+![画像名](https://docs.google.com/document/d/1cxuqf2OPtM1FMn15pTQ-4Ght6XOADkyDh6dgKMIL4nY/edit)
+![代替文字列](URL "タイトル")
+
+<img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
+
+# 画面遷移図
+
 
 
 # テーブル設計
@@ -89,26 +114,7 @@
 
 
 
-# ER図
-![画像名](https://docs.google.com/document/d/1cxuqf2OPtM1FMn15pTQ-4Ght6XOADkyDh6dgKMIL4nY/edit)
-![代替文字列](URL "タイトル")
 
-<img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
-
-
-
-# 画面遷移図
-
-# 実装機能
-ユーザー管理機能
-新規作成機能
-編集機能
-削除機能
-一覧機能
-画像投稿機能
-検索機能
-エラーの日本語表記
-コメント機能
 
 
 # 使用言語技術
