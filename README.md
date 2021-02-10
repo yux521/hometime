@@ -156,7 +156,7 @@ Faker
 
 # 今後の実装機能
 
-![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png)
+![画像名](https://github.com/yux521/hometime/blob/master/65f9bfac76069a42b68556d9451c488f.png)
 
 
 
