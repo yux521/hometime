@@ -35,8 +35,7 @@
 
 
 ## ER図
-![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png width="200" height="200")
-<img src="attach:cat.jpg" alt="attach:cat" title="attach:cat" width="200" height="200">
+![画像名](https://github.com/yux521/hometime/blob/master/79379a9e086793d7d922438931361a22.png)
 
 ## 画面遷移図
 
