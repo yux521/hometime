@@ -78,3 +78,40 @@
 
 # 画面遷移図
 
+使用言語技術
+バックエンド
+Ruby 2.6.5
+Ruby on Rails 6.0.3.4
+
+# 使用Gem
+rspec-rails
+factory_bot_rails
+faker
+devise　
+pry-rails
+rails-i18n
+active_hash
+mini_magics
+image_processing
+
+# フロント
+HTML
+CSS
+SCSS
+Bootstrap
+
+# データベース
+mysql2 　0.5.3
+
+# テスト
+RSpec　
+FactoryBot
+Faker
+
+
+# こだわったポイント
+
+
+# 今後の実装機能
+
+
