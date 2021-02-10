@@ -16,7 +16,7 @@
 検索しやすく<br>
 コミュニケーションも取れる<br>
 
-### 簡単なアプリの概要
+## 簡単なアプリの概要
 
 ![ログイン時の機能](https://github.com/yux521/hometime/blob/master/65f9bfac76069a42b68556d9451c488f.png)
 ![画像名](https://github.com/yux521/hometime/blob/master/16fa9a6408db5e70c79b361165875f08.png)
@@ -112,19 +112,12 @@
 - belongs_to :user
 - belongs_to :recipe
 
-
-
-
-
-
-
-
-# 使用言語技術
-バックエンド<br>
+## 使用言語技術
+### バックエンド<br>
 Ruby 2.6.5<br>
 Ruby on Rails 6.0.3.4<br>
 
-# 使用Gem
+### 使用Gem
 rspec-rails<br>
 factory_bot_rails<br>
 faker<br>
@@ -135,22 +128,22 @@ active_hash<br>
 mini_magics<br>
 image_processing<br>
 
-# フロント
+### フロント
 HTML<br>
 CSS<br>
 SCSS<br>
 Bootstrap
 
-# データベース
+### データベース
 mysql2 　0.5.3<br>
 
-# テスト
+### テスト
 RSpec<br>
 FactoryBot<br>
 Faker<br>
 
 
-# こだわったポイント
+## こだわったポイント
 
 料理の写真が目立つように、デザインはシンプルにすることで、<br>
 ユーザーのニーズによって、ログインを使い分けした<br>
