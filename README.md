@@ -119,42 +119,42 @@
 
 
 # 使用言語技術
-バックエンド
-Ruby 2.6.5
-Ruby on Rails 6.0.3.4
+バックエンド<br>
+Ruby 2.6.5<br>
+Ruby on Rails 6.0.3.4<br>
 
 # 使用Gem
-rspec-rails
-factory_bot_rails
-faker
-devise　
-pry-rails
-rails-i18n
-active_hash
-mini_magics
-image_processing
+rspec-rails<br>
+factory_bot_rails<br>
+faker<br>
+devise<br>　
+pry-rails<br>
+rails-i18n<br>
+active_hash<br>
+mini_magics<br>
+image_processing<br>
 
 # フロント
-HTML
-CSS
-SCSS
+HTML<br>
+CSS<br>
+SCSS<br>
 Bootstrap
 
 # データベース
-mysql2 　0.5.3
+mysql2 　0.5.3<br>
 
 # テスト
-RSpec　
-FactoryBot
-Faker
+RSpec<br>
+FactoryBot<br>
+Faker<br>
 
 
 # こだわったポイント
 
-料理の写真が目立つように、デザインはシンプルに
-ユーザーのニーズによって、ログインを使い分けした
-検索機能
-エラーを日本語表記に変更
+料理の写真が目立つように、デザインはシンプルに<br>
+ユーザーのニーズによって、ログインを使い分けした<br>
+検索機能<br>
+エラーを日本語表記に変更<br>
 
 
 
